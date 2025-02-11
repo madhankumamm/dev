@@ -37,6 +37,4 @@ jobs:
       run: |
         aws s3 sync . s3://my-static-website-demo1 --exclude ".git/*" --delete
 
-    - name: Set public-read ACL
-      run: |
-        aws s3 cp s3://my-static-website-demo1/index.html s3://my-static-website-demo1/index.html --acl public-read   
+      
