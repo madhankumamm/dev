@@ -3,7 +3,7 @@ name: Deploy to S3
 on:
   push:
     branches:
-      - develop
+      - velop
 
 jobs:
   ci:
@@ -35,6 +35,6 @@ jobs:
 
     - name: Sync files to S3
       run: |
-        aws s3 sync . s3://my-static-website-demo1 --exclude ".git/*" --delete
+        aws s3 sync . s3://my-static-prodwebapp --exclude ".git/*" --delete
 
       
